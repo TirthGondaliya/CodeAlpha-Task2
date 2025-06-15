@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediator - Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Mediator</h1>
+            <nav class="nav">
+                <a href="feed.html" class="nav-link">Feed</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="search.html" class="nav-link active">Search</a>
+                <a href="notifications.html" class="nav-link">Notifications</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search users...">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="search-results" class="search-results">
+            <!-- Search results will be displayed here -->
+        </div>
+    </div>
+
+    <script src="search.js"></script>
+</body>
+</html>

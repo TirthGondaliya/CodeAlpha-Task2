@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediator - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1 class="logo">Mediator</h1>
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="login-username" placeholder="Username or Email" required>
+                <input type="password" id="login-password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('login-username').value;
+            const password = document.getElementById('login-password').value;
+            
+            if (username && password) {
+                localStorage.setItem('currentUser', JSON.stringify({
+                    id: 0, 
+                    name: 'Current User', 
+                    username: username, 
+                    email: 'user@example.com', 
+                    followers: 0, 
+                    following: 0, 
+                    posts: 0
+                }));
+                window.location.href = 'feed.html';
+            } else {
+                alert('Please enter valid credentials');
+            }
+        });
+
+        // Example: Create a new user
+fetch('http://localhost:5000/api/users', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(newUser)
+});
+
+
+    </script>
+</body>
+</html>

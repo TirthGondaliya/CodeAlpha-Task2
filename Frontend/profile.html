@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediator - Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Mediator</h1>
+            <nav class="nav">
+                <a href="feed.html" class="nav-link">Feed</a>
+                <a href="profile.html" class="nav-link active">Profile</a>
+                <a href="search.html" class="nav-link">Search</a>
+                <a href="notifications.html" class="nav-link">Notifications</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="profile-header">
+            <div class="profile-avatar">👤</div>
+            <div class="profile-info">
+                <h2 id="profile-name">Current User</h2>
+                <p id="profile-username">@currentuser</p>
+                <div class="profile-stats">
+                    <span>Posts: <span id="profile-posts">0</span></span>
+                    <span>Followers: <span id="profile-followers">0</span></span>
+                    <span>Following: <span id="profile-following">0</span></span>
+                </div>
+            </div>
+        </div>
+        <div id="user-posts" class="posts-container">
+            <!-- User's posts will be displayed here -->
+        </div>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>

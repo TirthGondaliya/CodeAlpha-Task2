@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mediator - Feed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">Mediator</h1>
+            <nav class="nav">
+                <a href="feed.html" class="nav-link active">Feed</a>
+                <a href="profile.html" class="nav-link">Profile</a>
+                <a href="search.html" class="nav-link">Search</a>
+                <a href="notifications.html" class="nav-link">Notifications</a>
+            </nav>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle">🌙</button>
+                <button id="logout-btn" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post-form">
+            <textarea id="post-content" placeholder="What's on your mind?"></textarea>
+            <div class="media-controls">
+                <input type="file" id="media-input" accept="image/*,video/*" multiple style="display: none;">
+                <button type="button" id="photo-btn" class="media-btn">📷 Photo</button>
+                <button type="button" id="video-btn" class="media-btn">🎥 Video</button>
+                <div id="media-preview" class="media-preview"></div>
+            </div>
+            <button id="post-btn">Post</button>
+        </div>
+        <div id="posts-container" class="posts-container">
+            <!-- Posts will be dynamically loaded here -->
+        </div>
+    </div>
+
+    <script src="feed.js"></script>
+</body>
+</html>
